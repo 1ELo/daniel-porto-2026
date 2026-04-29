@@ -1,11 +1,11 @@
 <script lang="ts">
-  import LeafParticles from './LeafParticles.svelte';
-  import { onMount } from 'svelte';
-  import { Github, Linkedin, Briefcase } from 'lucide-svelte';
+  import LeafParticles from "./LeafParticles.svelte";
+  import { onMount } from "svelte";
+  import { Github, Linkedin, Briefcase } from "lucide-svelte";
 
   let mounted = $state(false);
-  let typedName = $state('');
-  const fullName = 'Daniel Hendra Susanto';
+  let typedName = $state("");
+  const fullName = "Daniel Hendra Susanto";
   let showCursor = $state(true);
 
   onMount(() => {
@@ -19,7 +19,9 @@
         i++;
       } else {
         clearInterval(typeInterval);
-        setTimeout(() => { showCursor = false; }, 2000);
+        setTimeout(() => {
+          showCursor = false;
+        }, 2000);
       }
     }, 60);
 
@@ -42,20 +44,37 @@
       </h1>
 
       <p class="hero-subtitle anim-3">
-        Building distributed systems, AI infrastructure,<br class="desktop-br" />
+        Building distributed systems, AI infrastructure,<br
+          class="desktop-br"
+        />
         and healthcare technology — one commit at a time.
       </p>
 
       <div class="hero-cta anim-4">
         <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="/DanielHendra_CV.pdf" target="_blank" rel="noopener" class="btn btn-outline">Download CV</a>
+        <a
+          href="/DanielHendraSusanto_CV_2026.pdf"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-outline">Download CV</a
+        >
       </div>
 
       <div class="hero-social anim-5">
-        <a href="https://github.com/1ELo" target="_blank" rel="noopener noreferrer" class="social-link">
+        <a
+          href="https://github.com/1ELo"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+        >
           <Github size={18} /> GitHub
         </a>
-        <a href="https://www.linkedin.com/in/daniel-hendra-89499716b" target="_blank" rel="noopener noreferrer" class="social-link">
+        <a
+          href="https://www.linkedin.com/in/daniel-hendra-89499716b"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+        >
           <Linkedin size={18} /> LinkedIn
         </a>
         <a href="mailto:hendradaniel61@gmail.com" class="social-link">
@@ -67,7 +86,11 @@
     <!-- Photo side -->
     <div class="hero-photo anim-photo">
       <div class="photo-frame">
-        <img src="/daniel-hero.jpeg" alt="Daniel Hendra Susanto" class="hero-img" />
+        <img
+          src="/daniel-hero.jpeg"
+          alt="Daniel Hendra Susanto"
+          class="hero-img"
+        />
         <div class="photo-overlay" aria-hidden="true"></div>
       </div>
       <!-- Decorative ring -->
@@ -78,7 +101,10 @@
   <!-- Scroll indicator -->
   <div class="scroll-indicator" aria-hidden="true">
     <svg class="falling-leaf" width="12" height="12" viewBox="0 0 24 24">
-      <path d="M12 2C6.5 6 3 10 3 14c0 5 4 8 9 8s9-3 9-8c0-4-3.5-8-9-12z" fill="var(--accent-primary)" />
+      <path
+        d="M12 2C6.5 6 3 10 3 14c0 5 4 8 9 8s9-3 9-8c0-4-3.5-8-9-12z"
+        fill="var(--accent-primary)"
+      />
     </svg>
   </div>
 </section>
@@ -116,18 +142,49 @@
   }
 
   /* Staggered animations */
-  .anim-1, .anim-2, .anim-3, .anim-4, .anim-5, .anim-photo {
+  .anim-1,
+  .anim-2,
+  .anim-3,
+  .anim-4,
+  .anim-5,
+  .anim-photo {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
   }
 
-  .mounted .anim-1 { opacity: 1; transform: translateY(0); transition-delay: 0ms; }
-  .mounted .anim-2 { opacity: 1; transform: translateY(0); transition-delay: 300ms; }
-  .mounted .anim-3 { opacity: 1; transform: translateY(0); transition-delay: 600ms; }
-  .mounted .anim-4 { opacity: 1; transform: translateY(0); transition-delay: 900ms; }
-  .mounted .anim-5 { opacity: 1; transform: translateY(0); transition-delay: 1200ms; }
-  .mounted .anim-photo { opacity: 1; transform: translateY(0); transition-delay: 200ms; }
+  .mounted .anim-1 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0ms;
+  }
+  .mounted .anim-2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 300ms;
+  }
+  .mounted .anim-3 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 600ms;
+  }
+  .mounted .anim-4 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 900ms;
+  }
+  .mounted .anim-5 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1200ms;
+  }
+  .mounted .anim-photo {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 200ms;
+  }
 
   .hero-label {
     display: inline-flex;
@@ -157,7 +214,9 @@
   }
 
   @keyframes blink {
-    50% { opacity: 0; }
+    50% {
+      opacity: 0;
+    }
   }
 
   .hero-subtitle {
@@ -167,7 +226,9 @@
     line-height: 1.6;
   }
 
-  .desktop-br { display: none; }
+  .desktop-br {
+    display: none;
+  }
 
   .hero-cta {
     display: flex;
@@ -257,7 +318,9 @@
     object-fit: cover;
     object-position: center 20%;
     filter: saturate(0.75) brightness(0.9);
-    transition: filter 0.4s ease, transform 0.4s ease;
+    transition:
+      filter 0.4s ease,
+      transform 0.4s ease;
   }
 
   .photo-frame:hover .hero-img {
@@ -286,8 +349,15 @@
   }
 
   @keyframes ringPulse {
-    0%, 100% { opacity: 0.4; transform: scale(1); }
-    50% { opacity: 0.8; transform: scale(1.02); }
+    0%,
+    100% {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.02);
+    }
   }
 
   .scroll-indicator {
@@ -302,13 +372,24 @@
   }
 
   @keyframes fallLeaf {
-    0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
-    50% { transform: translateY(16px) rotate(15deg); opacity: 1; }
-    100% { transform: translateY(32px) rotate(-5deg); opacity: 0; }
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateY(16px) rotate(15deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(32px) rotate(-5deg);
+      opacity: 0;
+    }
   }
 
   @media (min-width: 768px) {
-    .desktop-br { display: block; }
+    .desktop-br {
+      display: block;
+    }
 
     .hero-inner {
       flex-direction: row;
