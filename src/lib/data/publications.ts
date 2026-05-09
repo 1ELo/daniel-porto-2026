@@ -13,7 +13,7 @@ export const publications: Publication[] = [
         year: 2024,
         summary:
             'Systematic review of 14 deep learning studies on sign language recognition. Highlights ResNet-50 at 99.98% accuracy and charts a path for AI-driven assistive communication systems.',
-        url: '#'
+        url: 'https://doi.org/10.1109/ICIMTech63123.2024.10780830'
     },
     {
         title: "Refining Interface of the Indonesian Ministry of Health's Website Based on User Experience Questionnaire (UEQ)",
