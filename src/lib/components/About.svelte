@@ -81,7 +81,7 @@
         <!-- Stats -->
         <div class="stats-row">
           <StatCounter value={14} label="months production experience" />
-          <StatCounter value={2} label="published research papers" />
+          <StatCounter value={3} label="published research papers" />
           <StatCounter
             value={8}
             suffix="+"
