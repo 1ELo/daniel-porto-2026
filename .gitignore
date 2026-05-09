@@ -9,6 +9,7 @@ node_modules
 /build
 /assets
 /notion_resources
+new_design.md
 
 # OS
 .DS_Store

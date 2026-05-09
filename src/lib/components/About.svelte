@@ -13,8 +13,6 @@
     <div class="about-grid">
       <!-- Info Card -->
       <div class="info-card reveal" use:intersect>
-
-
         <div class="info-row">
           <span class="info-label">Name</span>
           <span class="info-value">Daniel Hendra Susanto</span>
@@ -83,7 +81,7 @@
         <!-- Stats -->
         <div class="stats-row">
           <StatCounter value={14} label="months production experience" />
-          <StatCounter value={3} label="published research papers" />
+          <StatCounter value={2} label="published research papers" />
           <StatCounter
             value={8}
             suffix="+"
@@ -151,8 +149,6 @@
     border-radius: 16px;
     padding: 2rem;
   }
-
-
 
   .info-row {
     display: flex;

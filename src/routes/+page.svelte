@@ -21,6 +21,5 @@
 <Projects />
 <WaveDivider />
 <Academic />
-<WaveDivider />
 <Contact />
 <Footer />
