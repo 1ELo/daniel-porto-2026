@@ -18,7 +18,7 @@ export const skillGroups: SkillGroup[] = [
     {
         icon: '☁️',
         title: 'Cloud & DevOps',
-        skills: ['Docker', 'CI/CD', 'Azure ML', 'Azure Blob', 'Git', 'Linux', 'k6', 'Shell/Bash']
+        skills: ['Docker', 'Azure ML', 'Azure Blob', 'Git', 'Linux', 'k6', 'Shell/Bash']
     },
     {
         icon: '🔒',

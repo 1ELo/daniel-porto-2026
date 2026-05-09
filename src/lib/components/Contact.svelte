@@ -18,10 +18,6 @@
         my inbox is always open.
       </p>
 
-      <a href="mailto:hendradaniel61@gmail.com" class="email-display">
-        hendradaniel61@gmail.com
-      </a>
-
       <div class="social-row">
         <a href="https://github.com/1ELo" target="_blank" rel="noopener noreferrer" class="social-card">
           <Github size={20} />
@@ -37,23 +33,6 @@
         </a>
       </div>
     </div>
-
-    <!-- Contact Form -->
-    <form class="contact-form reveal" use:intersect method="POST">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required placeholder="Your name" />
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required placeholder="your@email.com" />
-      </div>
-      <div class="form-group full-width">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
-      </div>
-      <button type="submit" class="submit-btn">Send Message 🌱</button>
-    </form>
   </div>
 </section>
 
@@ -103,7 +82,6 @@
 
   .contact-content {
     text-align: center;
-    margin-bottom: 3rem;
   }
 
   .contact-copy {
@@ -114,19 +92,6 @@
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .email-display {
-    display: inline-block;
-    font-family: var(--font-heading);
-    font-size: var(--text-xl);
-    color: var(--accent-primary);
-    text-decoration: none;
-    margin-bottom: 2rem;
-    transition: text-shadow 0.2s ease;
-  }
-  .email-display:hover {
-    text-shadow: 0 0 20px rgba(74, 222, 128, 0.4);
   }
 
   .social-row {
@@ -153,83 +118,5 @@
     border-color: var(--border-hover);
     transform: translateY(-2px);
     box-shadow: var(--glow-sm);
-  }
-
-  .contact-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
-  }
-
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-
-  .form-group.full-width {
-    grid-column: 1 / -1;
-  }
-
-  .form-group label {
-    font-size: var(--text-xs);
-    color: var(--text-muted);
-    font-weight: 500;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    background: var(--bg-elevated);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-card);
-    color: var(--text-primary);
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    outline: none;
-  }
-
-  .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: var(--accent-primary);
-    box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.1);
-  }
-
-  .form-group input::placeholder,
-  .form-group textarea::placeholder {
-    color: var(--text-muted);
-  }
-
-  .form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-  }
-
-  .submit-btn {
-    grid-column: 1 / -1;
-    padding: 0.8rem 2rem;
-    background: var(--accent-primary);
-    color: #080d0a;
-    border: none;
-    border-radius: var(--radius-pill);
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    justify-self: center;
-  }
-
-  .submit-btn:hover {
-    box-shadow: var(--glow-md);
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 640px) {
-    .contact-form {
-      grid-template-columns: 1fr;
-    }
   }
 </style>

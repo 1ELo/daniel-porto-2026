@@ -5,7 +5,8 @@
 
   const botanicals = [
     'M8 3C5 5 3 8 3 11c0 4 3 6 5 6s4-1 5-4',
-    'M10 3v14M5 8l5-3 5 3'
+    'M10 3v14M5 8l5-3 5 3',
+    'M12 2C6.5 6 3 10 3 14c0 5 4 8 9 8'
   ];
 </script>
 
@@ -51,26 +52,26 @@
           </div>
         </div>
       {/each}
-    </div>
 
-    <!-- Additional Engineering Contributions -->
-    <div class="additional-card reveal" use:intersect>
-      <h4 class="additional-title">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 2C6.5 6 3 10 3 14c0 5 4 8 9 8s9-3 9-8c0-4-3.5-8-9-12z" fill="var(--accent-primary)" />
-        </svg>
-        Additional Engineering Contributions (Production Systems)
-      </h4>
-      <ul class="contrib-list">
-        {#each additionalContributions as contrib}
-          <li class="contrib-item">
-            <svg class="leaf-bullet" width="6" height="6" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2C6.5 6 3 10 3 14c0 5 4 8 9 8s9-3 9-8c0-4-3.5-8-9-12z" fill="var(--accent-primary)" />
-            </svg>
-            <span>{contrib.description}</span>
-          </li>
-        {/each}
-      </ul>
+      <!-- Additional Engineering Contributions -->
+      <div class="additional-card reveal" use:intersect>
+        <h4 class="additional-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 2C6.5 6 3 10 3 14c0 5 4 8 9 8s9-3 9-8c0-4-3.5-8-9-12z" fill="var(--accent-primary)" />
+          </svg>
+          Additional Engineering Contributions (Production Systems)
+        </h4>
+        <ul class="contrib-list">
+          {#each additionalContributions as contrib}
+            <li class="contrib-item">
+              <svg class="leaf-bullet" width="6" height="6" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C6.5 6 3 10 3 14c0 5 4 8 9 8s9-3 9-8c0-4-3.5-8-9-12z" fill="var(--accent-primary)" />
+              </svg>
+              <span>{contrib.description}</span>
+            </li>
+          {/each}
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -205,23 +206,26 @@
   .project-link.muted { color: var(--text-muted); }
 
   .additional-card {
-    margin-top: 1.5rem;
     background: var(--bg-elevated);
     border: 1px solid var(--border);
     border-left: 3px solid var(--accent-amber);
     border-radius: var(--radius-card);
-    padding: 1.5rem 2rem;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .additional-title {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.6rem;
     font-family: var(--font-body);
-    font-size: var(--text-sm);
+    font-size: var(--text-base);
     font-weight: 600;
     color: var(--accent-amber);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .contrib-list {
@@ -229,12 +233,12 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1.25rem;
   }
 
   .contrib-item {
     display: flex;
-    gap: 0.75rem;
+    gap: 0.85rem;
     align-items: flex-start;
     font-size: var(--text-sm);
     color: var(--text-secondary);
@@ -243,7 +247,7 @@
 
   .leaf-bullet {
     flex-shrink: 0;
-    margin-top: 0.4rem;
+    margin-top: 0.35rem;
   }
 
   @media (min-width: 768px) {
